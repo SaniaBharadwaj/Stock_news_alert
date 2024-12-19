@@ -14,7 +14,8 @@ from win10toast import ToastNotifier
 
 stocks = ["SAREGAMA", "ZOMATO", "GTL Infrastructure","Ratan Tata"]
 
-NEWS_API_KEY = "0fef545266f74d5589cdcffe67099431"
+#Use Api key
+NEWS_API_KEY = "Pehle NEWS API SE API KEY GENERATE KAR BEY , DEVELOPER LOG PADHWO NAHI BHULIYO"
 
 notified_arti = {}
 
@@ -134,7 +135,7 @@ def toggle_theme():
 def fetch_news_from_all_sources(stock_sym,time_range):
 
     for stock in stock_sym:
-        url = f"https://newsapi.org/v2/everything?q={stock}&language=en&sortBy=popularity&apiKey=0fef545266f74d5589cdcffe67099431"
+        url = f"https://newsapi.org/v2/everything?q={stock}&language=en&sortBy=popularity&apiKey={NEWS_API_KEY}"
         response = requests.get(url)
 
         news_data = response.json()
